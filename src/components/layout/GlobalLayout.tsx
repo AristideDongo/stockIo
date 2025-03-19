@@ -17,9 +17,9 @@ const GlobalLayout = ({ children, title }: GlobalLayoutProps) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Navbar />
-      <div className="flex flex-1">
+      <div className="flex">
         <Sidebar />
-        <main className="flex-1 p-4">
+        <main className="flex-1 pl-64">
           {children}
         </main>
       </div>

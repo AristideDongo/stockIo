@@ -9,6 +9,7 @@ import {
   BarChart3,
   Settings,
   LogOut,
+  User,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -17,16 +18,16 @@ import { Separator } from "@/components/ui/separator";
 const Sidebar = () => {
   return (
     <div
-      className={`h-screen w-64 fixed top-0 left-0 bg-gray-900 text-gray-100 p-4 transition-all duration-300 border-r border-gray-800 flex flex-col overflow-hidden`}
+      className={`h-screen w-64 fixed top-0 left-0 text-black p-4 transition-all duration-300 border-r border-gray-400 rounded-r-xl  flex flex-col overflow-hidden`}
     >
       <div className="flex items-center mt-12 justify-between mb-8">
       </div>
       <nav className="flex-1">
-        <ul className="space-y-2">
+        <ul className="space-y-2 text-black ">
           <li>
             <Link
               href="/"
-              className="flex items-center p-3 rounded-lg bg-gray-800 text-gray-100"
+              className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
             >
               <Home size={20} className="mr-3" />
               <span>Tableau de bord</span>
@@ -35,7 +36,7 @@ const Sidebar = () => {
           <li>
             <Link
               href="#"
-              className="flex items-center p-3 rounded-lg hover:bg-gray-800 text-gray-400 hover:text-gray-100 transition-colors"
+              className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
             >
               <Package size={20} className="mr-3" />
               <span>Inventaire</span>
@@ -44,7 +45,7 @@ const Sidebar = () => {
           <li>
             <Link
               href="#"
-              className="flex items-center p-3 rounded-lg hover:bg-gray-800 text-gray-400 hover:text-gray-100 transition-colors"
+              className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
             >
               <CreditCard size={20} className="mr-3" />
               <span>Commandes</span>
@@ -53,7 +54,7 @@ const Sidebar = () => {
           <li>
             <Link
               href="#"
-              className="flex items-center p-3 rounded-lg hover:bg-gray-800 text-gray-400 hover:text-gray-100 transition-colors"
+              className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
             >
               <Truck size={20} className="mr-3" />
               <span>Livraisons</span>
@@ -62,29 +63,38 @@ const Sidebar = () => {
           <li>
             <Link
               href="#"
-              className="flex items-center p-3 rounded-lg hover:bg-gray-800 text-gray-400 hover:text-gray-100 transition-colors"
+              className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
             >
-              <Users size={20} className="mr-3" />
+              <User size={20} className="mr-3" />
               <span>Fournisseurs</span>
             </Link>
           </li>
           <li>
             <Link
               href="#"
-              className="flex items-center p-3 rounded-lg hover:bg-gray-800 text-gray-400 hover:text-gray-100 transition-colors"
+              className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              <Users size={20} className="mr-3" />
+              <span>Clients</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="#"
+              className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
             >
               <BarChart3 size={20} className="mr-3" />
-              <span>Statistiques</span>
+              <span>Rapports</span>
             </Link>
           </li>
         </ul>
-        <Separator />
+        <Separator className="bg-gray-400 mt-2" />
         <div className="pt-4">
-          <ul className="space-y-2">
+          <ul className="space-y-2 text-black">
             <li>
               <Link
                 href="#"
-                className="flex items-center p-3 rounded-lg hover:bg-gray-800 text-gray-400 hover:text-gray-100 transition-colors"
+                className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
               >
                 <Settings size={20} className="mr-3" />
                 <span>Paramètres</span>
@@ -92,7 +102,7 @@ const Sidebar = () => {
             </li>
             <li>
               <Button
-                className="flex items-center p-3 rounded-lg hover:bg-red-800 text-gray-400 hover:text-gray-100 transition-colors"
+                className="flex items-center p-3 rounded-lg bg-black hover:bg-red-800 text-white transition-colors"
               >
                 <LogOut size={20} className="mr-3" />
                 <span>Déconnexion</span>
