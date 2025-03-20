@@ -10,6 +10,7 @@ import {
   Settings,
   LogOut,
   User,
+  Package2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -18,9 +19,10 @@ import { Separator } from "@/components/ui/separator";
 const Sidebar = () => {
   return (
     <div
-      className={`h-screen w-64 fixed top-0 left-0 text-black p-4 transition-all duration-300 border-r border-gray-400 rounded-r-xl  flex flex-col overflow-hidden`}
+      className={`h-full w-64 fixed top-0 left-0 text-black p-4 transition-all duration-300 border-r border-gray-400 rounded-r-xl  flex flex-col overflow-hidden`}
     >
-      <div className="flex items-center mt-12 justify-between mb-8">
+      <div className="flex items-center justify-between mb-8">
+      <h1 className="text-black text-center text-2xl font-bold">Stock Manager</h1>
       </div>
       <nav className="flex-1">
         <ul className="space-y-2 text-black ">
@@ -35,7 +37,7 @@ const Sidebar = () => {
           </li>
           <li>
             <Link
-              href="#"
+              href="inventory"
               className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
             >
               <Package size={20} className="mr-3" />
@@ -48,7 +50,7 @@ const Sidebar = () => {
               className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
             >
               <CreditCard size={20} className="mr-3" />
-              <span>Commandes</span>
+              <span>Ventes</span>
             </Link>
           </li>
           <li>
@@ -102,7 +104,7 @@ const Sidebar = () => {
             </li>
             <li>
               <Button
-                className="flex items-center p-3 rounded-lg bg-black hover:bg-red-800 text-white transition-colors"
+                className="flex items-center p-3 rounded-lg bg-black hover:bg-red-700 text-white transition-colors"
               >
                 <LogOut size={20} className="mr-3" />
                 <span>Déconnexion</span>

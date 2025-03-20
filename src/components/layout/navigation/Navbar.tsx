@@ -24,33 +24,32 @@ import {
 
 const Navbar = () => {
   return (
-    <header className="h-16 bg-gray-900 border-b border-gray-800 px-6 flex items-center justify-between sticky top-0 z-10">
-        <h1 className="text-white text-lg font-semibold">Stock Manager</h1>
+    <header className="h-16 ml-64 bg-white border-b border-gray-400 px-6 flex items-center justify-between sticky top-0 z-50">
       <div className="relative w-[300px]">
         <Input
           type="text"
           placeholder="Rechercher un produit, une commande..."
-          className="w-full bg-gray-800 text-gray-100 pl-10 pr-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm"
+          className="w-full text-black border-black border pl-10 pr-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-black text-sm"
         />
         <Search size={16} className="absolute left-3 top-2.5 text-gray-400" />
       </div>
 
       <div className="flex items-center space-x-4">
-        <Button className="p-2 rounded-lg hover:bg-gray-800 relative">
-          <Bell size={30} />
-            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+        <Button className="p-2 rounded-lg bg-gray-300 hover:bg-gray-400 relative">
+          <Bell size={30} className='text-black' />
+            <span className="absolute -top-1 -right-1 bg-red-500 text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                 10
             </span>
         </Button>
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="flex items-center space-x-2 py-2 px-3 rounded-lg hover:bg-gray-800">
+            <Button variant="ghost" className="flex items-center space-x-2 py-6 px-5 rounded-lg bg-gray-300 hover:bg-gray-400">
               <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
                 <User size={18} />
               </div>
-              <span className="font-medium text-gray-100">Admin</span>
-              <ChevronDown size={16} className="text-gray-400" />
+              <span className="font-medium text-black">Admin</span>
+              <ChevronDown size={16} className="text-black" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="bg-gray-800 border border-gray-700 rounded-lg shadow-lg text-gray-100">

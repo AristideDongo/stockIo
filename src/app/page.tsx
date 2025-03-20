@@ -1,7 +1,6 @@
 import GlobalLayout from "@/components/layout/GlobalLayout";
 import ChartOverview from "@/components/layout/home/ChartOverview";
 import DashboardHeader from "@/components/layout/home/DashboardHeaders";
-import StockMovementTable from "@/components/layout/home/StockMovementTable";
 
 export default function Home() {
   return (
@@ -11,7 +10,6 @@ export default function Home() {
       </div>
       <DashboardHeader />
       <ChartOverview/>
-      <StockMovementTable />
     </GlobalLayout>
   );
 }
