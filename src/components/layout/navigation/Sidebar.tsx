@@ -4,17 +4,23 @@ import {
   Home,
   Package,
   CreditCard,
-  Truck,
   Users,
   BarChart3,
   Settings,
-  LogOut,
   User,
-  Package2,
+  PowerOff,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Separator } from "@/components/ui/separator";
+
+const sidelinks = [
+  {path: '/', name: 'Tableau de bord', Icon: <Home size={20} className="mr-3" />},
+  {path: '/inventory', name: 'Inventaire', Icon: <Package size={20} className="mr-3" />},
+  {path: '/sales', name: 'Ventes', Icon: <CreditCard size={20} className="mr-3" />},
+  {path: '/suppliers', name: 'Fournisseurs', Icon: <Users size={20} className="mr-3" />},
+  {path: '/customers', name: 'Clients', Icon: <User size={20} className="mr-3" />},
+  {path: '/reports', name: 'Rapports', Icon: <BarChart3 size={20} className="mr-3" />},
+]
 
 const Sidebar = () => {
   return (
@@ -25,88 +31,35 @@ const Sidebar = () => {
       <h1 className="text-black text-center text-2xl font-bold">Stock Manager</h1>
       </div>
       <nav className="flex-1">
-        <ul className="space-y-2 text-black ">
+        {sidelinks.map((link, i) =>(
+          <ul key={i} className="space-y-2 text-black ">
           <li>
             <Link
-              href="/"
+              href={link.path}
               className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
             >
-              <Home size={20} className="mr-3" />
-              <span>Tableau de bord</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="inventory"
-              className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
-            >
-              <Package size={20} className="mr-3" />
-              <span>Inventaire</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
-            >
-              <CreditCard size={20} className="mr-3" />
-              <span>Ventes</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
-            >
-              <Truck size={20} className="mr-3" />
-              <span>Livraisons</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
-            >
-              <User size={20} className="mr-3" />
-              <span>Fournisseurs</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
-            >
-              <Users size={20} className="mr-3" />
-              <span>Clients</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
-            >
-              <BarChart3 size={20} className="mr-3" />
-              <span>Rapports</span>
+              {link.Icon}
+              <span>{link.name}</span>
             </Link>
           </li>
         </ul>
-        <Separator className="bg-gray-400 mt-2" />
-        <div className="pt-4">
+        ))}
+        <div className="pt-32">
           <ul className="space-y-2 text-black">
             <li>
               <Link
                 href="#"
                 className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                <Settings size={20} className="mr-3" />
+                <Settings size={20} className="mr-2" />
                 <span>Paramètres</span>
               </Link>
             </li>
             <li>
               <Button
-                className="flex items-center p-3 rounded-lg bg-black hover:bg-red-700 text-white transition-colors"
+                className="flex items-center w-full p-3 rounded-lg bg-black hover:bg-red-700 text-white transition-colors"
               >
-                <LogOut size={20} className="mr-3" />
+                <PowerOff size={20} className="mr-2" />
                 <span>Déconnexion</span>
               </Button>
             </li>

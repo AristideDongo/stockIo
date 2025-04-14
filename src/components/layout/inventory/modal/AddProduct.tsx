@@ -27,7 +27,6 @@ const productFormSchema = z.object({
   category: z.string().min(1, "La catégorie est requise"),
   price: z.string().min(0, "Le prix doit être positif"),
   quantity: z.string().min(0, "La quantité doit être un nombre entier positif"),
-  description: z.string().optional(),
   supplier: z.string().optional(),
 })
 
@@ -40,7 +39,6 @@ const defaultValues: Partial<ProductFormValues> = {
   category: "",
   price: '0',
   quantity: '0',
-  description: "",
   supplier: "",
 }
 
@@ -157,22 +155,6 @@ export function AddProductModal() {
                   <div className="col-span-3">
                     <FormControl>
                       <Input type="number" placeholder="0" min="0" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </div>
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="description"
-              render={({ field }) => (
-                <FormItem className="grid grid-cols-4 items-center gap-4">
-                  <FormLabel className="text-right">Description</FormLabel>
-                  <div className="col-span-3">
-                    <FormControl>
-                      <Textarea placeholder="Description du produit" rows={3} {...field} />
                     </FormControl>
                     <FormMessage />
                   </div>
