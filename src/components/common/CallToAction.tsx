@@ -4,9 +4,9 @@ import {
     ChevronDown,
     User,
     Settings,
-    LogOut,
     HelpCircle,
-    Shield
+    Shield,
+    PowerOff
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -70,7 +70,7 @@ export default function CallToAction() {
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
               <Link href="#" className="flex items-center px-4 py-2 text-red-400 hover:text-red-300">
-                <LogOut size={16} className="mr-2" /> Déconnexion
+                <PowerOff size={16} className="mr-2" /> Déconnexion
               </Link>
             </DropdownMenuItem>
           </DropdownMenuContent>

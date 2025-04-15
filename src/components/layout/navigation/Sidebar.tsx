@@ -5,7 +5,6 @@ import {
   Package,
   CreditCard,
   Users,
-  BarChart3,
   Settings,
   User,
   PowerOff,
@@ -18,8 +17,7 @@ const sidelinks = [
   {path: '/inventory', name: 'Inventaire', Icon: <Package size={20} className="mr-3" />},
   {path: '/sales', name: 'Ventes', Icon: <CreditCard size={20} className="mr-3" />},
   {path: '/suppliers', name: 'Fournisseurs', Icon: <Users size={20} className="mr-3" />},
-  {path: '/customers', name: 'Clients', Icon: <User size={20} className="mr-3" />},
-  {path: '/reports', name: 'Rapports', Icon: <BarChart3 size={20} className="mr-3" />},
+  {path: '/purchase-history', name: 'Historique d\'achat', Icon: <User size={20} className="mr-3" />},
 ]
 
 const Sidebar = () => {
@@ -44,7 +42,7 @@ const Sidebar = () => {
           </li>
         </ul>
         ))}
-        <div className="pt-32">
+        <div className="pt-40">
           <ul className="space-y-2 text-black">
             <li>
               <Link
