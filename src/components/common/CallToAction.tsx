@@ -18,16 +18,12 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { NotificationMenu } from './Notifications';
 
 export default function CallToAction() {
   return (
     <div className="flex items-center space-x-4">
-        <Button className="p-2 rounded-lg bg-gray-300 hover:bg-gray-400 relative">
-          <Bell size={30} className='text-black' />
-            <span className="absolute -top-1 -right-1 bg-red-500 text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-                10
-            </span>
-        </Button>
+          <NotificationMenu/>
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -60,11 +56,6 @@ export default function CallToAction() {
             <DropdownMenuItem asChild>
               <Link href="#" className="flex items-center px-4 py-2">
                 <Shield size={16} className="mr-2" /> Sécurité
-              </Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem asChild>
-              <Link href="#" className="flex items-center px-4 py-2">
-                <HelpCircle size={16} className="mr-2" /> Aide & Support
               </Link>
             </DropdownMenuItem>
             <DropdownMenuSeparator />

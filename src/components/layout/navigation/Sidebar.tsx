@@ -55,7 +55,7 @@ const Sidebar = () => {
             </li>
             <li>
               <Button
-                className="flex items-center w-full p-3 rounded-lg bg-black hover:bg-red-700 text-white transition-colors"
+                className="flex items-center w-full p-3 rounded-lg bg-black hover:bg-red-700 text-white transition-colors cursor-pointer"
               >
                 <PowerOff size={20} className="mr-2" />
                 <span>Déconnexion</span>
